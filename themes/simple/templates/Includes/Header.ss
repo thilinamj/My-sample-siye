@@ -1,0 +1,51 @@
+<%--<header class="header" role="banner">--%>
+	<%--<div class="inner">--%>
+		<%--<div class="unit size4of4 lastUnit">--%>
+			<%--<a href="$BaseHref" class="brand" rel="home">--%>
+				<%--<h1>$SiteConfig.Title</h1>--%>
+				<%--<% if $SiteConfig.Tagline %>--%>
+				<%--<p>$SiteConfig.Tagline</p>--%>
+				<%--<% end_if %>--%>
+			<%--</a>--%>
+			<%--<% if $SearchForm %>--%>
+				<%--<span class="search-dropdown-icon">L</span>--%>
+				<%--<div class="search-bar">--%>
+					<%--$SearchForm--%>
+				<%--</div>--%>
+			<%--<% end_if %>--%>
+			<%--<% include Navigation %>--%>
+		<%--</div>--%>
+	<%--</div>--%>
+<%--</header>--%>
+
+<header class="header js-header">
+	<div class="grid-container">
+		<div class="grid-x header__nav">
+			<div class="header__logo">
+				<a href="$BaseHref">
+					<img src="{$ThemeDir}/static/images/logo.png">
+				</a>
+			</div>
+
+			<a class="header__hamburger" data-toggle="mobileMenu">
+				<span class="line line-1"></span>
+				<span class="line line-2"></span>
+				<span class="line line-3"></span>
+			</a>
+
+			<div class="header__menu">
+				<nav>
+					<ul class="menu">
+						<% loop $Menu(1) %>
+							<li>
+								<a class="<% if $LinkingMode == $current %>active<% end_if %>" href="$Link">
+									$MenuTitle
+								</a>
+							</li>
+						<% end_loop %>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
